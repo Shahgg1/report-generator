@@ -1,0 +1,130 @@
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Utility Class for Hiding Elements */
+.hidden {
+  display: none;
+}
+
+/* Authentication Container Styles */
+#auth-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.auth-form {
+  margin-bottom: 1rem;
+}
+.auth-form input {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.auth-form button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #4facfe;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.auth-form button:hover {
+  background-color: #00f2fe;
+}
+
+/* Main App Container Styles */
+#app-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+header h1 {
+  font-size: 1.5rem;
+}
+header button {
+  padding: 0.5rem 1rem;
+  background-color: #ff4d4d;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #ff1a1a;
+}
+
+/* Section Styles */
+section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.attachment {
+  margin-bottom: 1rem;
+}
+.attachment input {
+  width: calc(100% - 10px);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* Report Generator and Display Styles */
+#user-prompt, #report-format {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+#generate-report, #download-report, #next-to-prompt, #next-to-format {
+  padding: 0.75rem 1.5rem;
+  background-color: #4facfe;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#generate-report:hover, #download-report:hover, #next-to-prompt:hover, #next-to-format:hover {
+  background-color: #00f2fe;
+}
+#report-content {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  min-height: 150px;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI-Powered Report Generator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Include jsPDF library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Include PDF.js library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+</head>
+<body>
+  <!-- Authentication Container -->
+  <div id="auth-container">
+    <h2>Welcome to AI Report Generator</h2>
+    <div id="auth-forms">
+      <!-- Login Form -->
+      <div id="login-form" class="auth-form">
+        <h3>Login</h3>
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Password" required />
+        <button id="login-btn">Log In</button>
+        <p>Don't have an account? <a href="#" id="show-signup">Sign Up</a></p>
+      </div>
+      <!-- Signup Form -->
+      <div id="signup-form" class="auth-form hidden">
+        <h3>Sign Up</h3>
+        <input type="text" id="signup-name" placeholder="Full Name" required />
+        <input type="email" id="signup-email" placeholder="Email" required />
+        <input type="password" id="signup-password" placeholder="Password" required />
+        <button id="signup-btn">Sign Up</button>
+        <p>Already have an account? <a href="#" id="show-login">Log In</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Application Container -->
+  <div id="app-container" class="hidden">
+    <header>
+      <h1>AI-Powered Report Generator</h1>
+      <button id="logout-btn">Logout</button>
+    </header>
+
+    <!-- PDF Attachment Section -->
+    <section id="pdf-section">
+      <h2>Attach PDF</h2>
+      <div class="attachment">
+        <label for="pdf-upload">Select PDF (Book):</label>
+        <input type="file" id="pdf-upload" accept="application/pdf" />
+      </div>
+      <button id="next-to-prompt">Next</button>
+    </section>
+
+    <!-- Prompt Input Section -->
+    <section id="prompt-section" class="hidden">
+      <h2>Enter Your Prompt</h2>
+      <textarea id="user-prompt" rows="4" placeholder="Enter your prompt here..."></textarea>
+      <button id="next-to-format">Next</button>
+    </section>
+
+    <!-- Custom Report Format Section -->
+    <section id="format-section" class="hidden">
+      <h2>Customize Report Format</h2>
+      <textarea id="report-format" rows="4" placeholder="Enter your custom report format..."></textarea>
+      <button id="generate-report">Generate Report</button>
+    </section>
+
+    <!-- Report Preview and PDF Download Section -->
+    <section id="report-display" class="hidden">
+      <h2>Generated Report Preview</h2>
+      <div id="report-content"></div>
+      <button id="download-report">Download Report as PDF</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
